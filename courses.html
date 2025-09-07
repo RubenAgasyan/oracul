@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Учебный Организатор - Предметы</title>
+    <title>Oracle - Предметы</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -16,6 +16,10 @@
     </button>
 
     <nav class="nav-menu" id="navMenu">
+        <div class="nav-header">
+            <h2>Oracle</h2>
+            <button class="close-nav" id="closeNav">×</button>
+        </div>
         <ul>
             <li><a href="index.html" class="nav-link">Главная</a></li>
             <li><a href="notes.html" class="nav-link">Заметки</a></li>
@@ -33,12 +37,17 @@
                 <div class="input-group">
                     <input type="text" id="courseName" placeholder="Название предмета">
                     <input type="url" id="courseLink" placeholder="Ссылка на курс">
-                    <button id="addCourseBtn">Добавить предмет</button>
+                    <textarea id="courseDescription" placeholder="Описание предмета (необязательно)"></textarea>
+                    <button id="addCourseBtn" class="btn-primary">Добавить предмет</button>
                 </div>
             </div>
 
             <div class="courses-container" id="coursesContainer">
                 <!-- Предметы будут добавляться здесь -->
+                <div class="empty-state" id="emptyCoursesState">
+                    <p>У вас пока нет добавленных предметов</p>
+                    <p>Добавьте первый предмет с помощью формы выше</p>
+                </div>
             </div>
         </div>
     </main>

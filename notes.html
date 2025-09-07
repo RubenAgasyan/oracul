@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Учебный Организатор - Заметки</title>
+    <title>Oracle - Заметки</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -16,6 +16,10 @@
     </button>
 
     <nav class="nav-menu" id="navMenu">
+        <div class="nav-header">
+            <h2>Oracle</h2>
+            <button class="close-nav" id="closeNav">×</button>
+        </div>
         <ul>
             <li><a href="index.html" class="nav-link">Главная</a></li>
             <li><a href="notes.html" class="nav-link active">Заметки</a></li>
@@ -31,7 +35,7 @@
             <div class="notes-controls">
                 <div class="search-box">
                     <input type="text" id="searchInput" placeholder="Поиск по заметкам...">
-                    <button id="searchBtn">Найти</button>
+                    <button id="searchBtn">🔍</button>
                 </div>
 
                 <div class="note-form">
@@ -39,14 +43,26 @@
                     <textarea id="noteText" placeholder="Введите текст заметки..."></textarea>
                     <div class="deadline-input">
                         <label for="noteDeadline">Дедлайн:</label>
-                        <input type="date" id="noteDeadline">
+                        <input type="datetime-local" id="noteDeadline">
                     </div>
-                    <button id="addNoteBtn">Добавить заметку</button>
+                    <div class="priority-input">
+                        <label for="notePriority">Приоритет:</label>
+                        <select id="notePriority">
+                            <option value="low">Низкий</option>
+                            <option value="medium" selected>Средний</option>
+                            <option value="high">Высокий</option>
+                        </select>
+                    </div>
+                    <button id="addNoteBtn" class="btn-primary">Добавить заметку</button>
                 </div>
             </div>
 
             <div class="notes-container" id="notesContainer">
                 <!-- Заметки будут добавляться здесь -->
+                <div class="empty-state" id="emptyNotesState">
+                    <p>У вас пока нет заметок</p>
+                    <p>Добавьте первую заметку с помощью формы выше</p>
+                </div>
             </div>
         </div>
     </main>
