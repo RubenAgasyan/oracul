@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебный Организатор - Предметы</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <button class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="nav-menu" id="navMenu">
+        <ul>
+            <li><a href="index.html" class="nav-link">Главная</a></li>
+            <li><a href="notes.html" class="nav-link">Заметки</a></li>
+            <li><a href="courses.html" class="nav-link active">Предметы</a></li>
+            <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="container">
+            <h1>Учебные предметы</h1>
+
+            <div class="course-form">
+                <h2>Добавить новый предмет</h2>
+                <div class="input-group">
+                    <input type="text" id="courseName" placeholder="Название предмета">
+                    <input type="url" id="courseLink" placeholder="Ссылка на курс">
+                    <button id="addCourseBtn">Добавить предмет</button>
+                </div>
+            </div>
+
+            <div class="courses-container" id="coursesContainer">
+                <!-- Предметы будут добавляться здесь -->
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

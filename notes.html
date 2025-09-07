@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебный Организатор - Заметки</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <button class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="nav-menu" id="navMenu">
+        <ul>
+            <li><a href="index.html" class="nav-link">Главная</a></li>
+            <li><a href="notes.html" class="nav-link active">Заметки</a></li>
+            <li><a href="courses.html" class="nav-link">Предметы</a></li>
+            <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="container">
+            <h1>Мои Заметки</h1>
+
+            <div class="notes-controls">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Поиск по заметкам...">
+                    <button id="searchBtn">Найти</button>
+                </div>
+
+                <div class="note-form">
+                    <h2>Добавить новую заметку</h2>
+                    <textarea id="noteText" placeholder="Введите текст заметки..."></textarea>
+                    <div class="deadline-input">
+                        <label for="noteDeadline">Дедлайн:</label>
+                        <input type="date" id="noteDeadline">
+                    </div>
+                    <button id="addNoteBtn">Добавить заметку</button>
+                </div>
+            </div>
+
+            <div class="notes-container" id="notesContainer">
+                <!-- Заметки будут добавляться здесь -->
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
